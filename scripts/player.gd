@@ -6,8 +6,8 @@ extends CharacterBody2D
 ## handles playin player's animations based on input.
 
 
-const SPEED = 125.0
-const JUMP_VELOCITY = -250.0
+const SPEED: float = 125.0
+const JUMP_VELOCITY: float = -250.0
 @onready var animated_sprite = $AnimatedSprite2D
 
 

@@ -6,8 +6,8 @@ extends Node2D
 ## flip the sprite accordingly.
 
 
-const SPEED = 60
-var direction = 1
+const SPEED: int = 60
+var direction: int = 1
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var ray_cast_right = $RayCastRight
 @onready var ray_cast_left = $RayCastLeft
