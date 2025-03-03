@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cngrs5ibf6de4"]
+[gd_scene load_steps=14 format=4 uid="uid://cngrs5ibf6de4"]
 
 [ext_resource type="PackedScene" uid="uid://bc1muk7walebo" path="res://scenes/player.tscn" id="1_eyugd"]
 [ext_resource type="Texture2D" uid="uid://buqj0g53stdp5" path="res://assets/sprites/world_tileset.png" id="2_q38js"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://drlfrqi7l4dcf" path="res://scenes/coin.tscn" id="4_mhasd"]
 [ext_resource type="PackedScene" uid="uid://5873gihyvmql" path="res://scenes/killzone.tscn" id="5_n5tcs"]
 [ext_resource type="PackedScene" uid="uid://f8vaq5n0gsiw" path="res://scenes/enemy.tscn" id="6_2l0rt"]
+[ext_resource type="FontFile" uid="uid://pru5k4sqg6bo" path="res://assets/fonts/PixelOperator8.ttf" id="7_u3kes"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hs0eu"]
 texture = ExtResource("2_q38js")
@@ -290,5 +291,82 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Enemy" parent="." instance=ExtResource("6_2l0rt")]
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("6_2l0rt")]
 position = Vector2(232, 144)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = 4.0
+offset_top = 72.0
+offset_right = 114.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_u3kes")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump"
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 166.0
+offset_top = 87.0
+offset_right = 276.0
+offset_bottom = 110.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_u3kes")
+theme_override_font_sizes/font_size = 8
+text = "Danger ahead..."
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 498.0
+offset_top = 83.0
+offset_right = 608.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_u3kes")
+theme_override_font_sizes/font_size = 8
+text = "I believe in you!"
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = 677.0
+offset_top = 63.0
+offset_right = 787.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_u3kes")
+theme_override_font_sizes/font_size = 8
+text = "Only a true GAMER
+can solve this one!"
+
+[node name="Label5" type="Label" parent="Labels"]
+offset_left = 763.0
+offset_top = -76.0
+offset_right = 848.0
+offset_bottom = -53.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_u3kes")
+theme_override_font_sizes/font_size = 8
+text = "You are truly
+THE GAMER!"
+
+[node name="Label6" type="Label" parent="Labels"]
+offset_left = 152.0
+offset_top = -9.0
+offset_right = 276.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_u3kes")
+theme_override_font_sizes/font_size = 8
+text = "Moves like a knight."
+
+[node name="Label7" type="Label" parent="Labels"]
+offset_left = 492.0
+offset_top = -10.0
+offset_right = 616.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_u3kes")
+theme_override_font_sizes/font_size = 8
+text = "Shiny things make
+you happy!"
