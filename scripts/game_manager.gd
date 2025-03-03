@@ -1,7 +1,8 @@
 extends Node
-## PLACEHOLDER:Script for player's interaction with the killzone.
+## Script for managing game events
 ##
-## PLACEHOLDER:Script handles the interaction between a player's body and a killzone,
+## Keeps score count for single run. Resets when game is restarted. Displays
+## collected coins in score label.
 
 
 var score: int = 0

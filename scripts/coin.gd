@@ -6,10 +6,10 @@ extends Area2D
 ## score. After that removes the coin from the scene.
 
 
-@onready var game_manage = %GameManager
-
+@onready var game_manage: Node = %GameManager
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 # Player collides with a coin
 func _on_body_entered(body: Node2D) -> void:
 	game_manage.add_point()
-	queue_free()
+	animation_player.play("pickup")
